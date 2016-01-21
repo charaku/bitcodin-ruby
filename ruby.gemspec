@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bitcodin/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ruby"
+  spec.name          = "bitcodin"
   spec.version       = Bitcodin::VERSION
   spec.authors       = ["Reinhard Grandl"]
   spec.email         = ["reinhard.grandl@bitmovin.net"]
@@ -26,6 +26,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "coveralls",       "~> 0.8.0"
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
