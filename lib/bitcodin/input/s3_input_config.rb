@@ -3,7 +3,7 @@ module Bitcodin
 
     attr_accessor :values
 
-    def initialize(url:, accessKey: ,secretKey: , bucket:)
+    def initialize(url:, accessKey: ,secretKey: , bucket:, region:)
       @values = '{
         "type": "s3",
         "accessKey": "' + accessKey + '",
