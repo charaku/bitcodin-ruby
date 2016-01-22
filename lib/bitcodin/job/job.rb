@@ -5,7 +5,7 @@ module Bitcodin
       @values = '{'
       @values += '"inputId": ' + inputId.to_s + ','
       @values += '"encodingProfileId": ' + encodingProfileId.to_s + ','
-      @values += '"manifestTypes": ' + manifestTypes.to_s + ''
+      @values += '"manifestTypes": ' + manifestTypes.to_s + ','
       @values += '"outputId": ' + outputId.to_s + '' if outputId.present?
       unless speed.nil?
         @values += ',"speed": ' + '"' + speed.to_s + '"' + ''
