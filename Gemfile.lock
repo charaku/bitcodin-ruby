@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    ruby (0.1.0)
+    bitcodin (0.1.0)
+      rest-client (~> 1.8.0)
 
 GEM
   remote: https://rubygems.org/
@@ -43,12 +44,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitcodin!
   bundler (~> 1.10)
   coveralls
   json
   rake (~> 10.0)
   rest-client
-  ruby!
 
 BUNDLED WITH
-   1.10.4
+   1.11.2
