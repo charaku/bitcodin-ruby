@@ -28,6 +28,7 @@ require 'bitcodin/job/location'
 module Bitcodin
 
   class BitcodinAPI
+    attr_accessor :apiURL
 
     def initialize(apiKey)
       @apiKey  = apiKey
