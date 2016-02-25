@@ -24,7 +24,7 @@ require 'bitcodin/job/hls_encryption_configuration'
 require 'bitcodin/job/audio_meta_data_configuration'
 require 'bitcodin/job/video_meta_data_configuration'
 require 'bitcodin/job/location'
-require 'bitcodin/thumbnail'
+require 'bitcodin/thumbnail/thumbnail'
 
 module Bitcodin
 
