@@ -238,7 +238,7 @@ module Bitcodin
       end
     end
 
-    def createThumbnail
+    def createThumbnail(inputConfig)
       url = @apiURL.concat('thumbnail')
       return @httpClient.sendRequest('post', url, inputConfig.values)
     end
