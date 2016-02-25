@@ -5,7 +5,7 @@ module Bitcodin
 
     def initialize(job_id, height, position, filename)
       @values = {
-        :job_id => job_id,
+        :jobId => job_id,
         :height => height,
         :position => position,
         :filename => filename
