@@ -32,6 +32,22 @@ module Bitcodin
       assert_equal(response.code, ResponseCodes::POST)
     end
 
+    def test_createInputAsync
+      # create new bitcodinAPI instance
+      bitcodinAPI = BitcodinAPI.new(@apiKey)
+
+      # create http config
+      inputUrl  = 'http://bitbucketireland.s3.amazonaws.com/Sintel-original-short.mkv'
+
+      # parse response to get input ID
+      response     = bitcodinAPI.createInputAsync('url', inputUrl)
+      responseData = JSON.parse(response)
+      @inputId     = responseData['inputId']
+
+      # check response code
+      assert_equal(response.code, ResponseCodes::POST)
+    end
+
     def teardown
       # create new bitcodinAPI instance
       bitcodinAPI = BitcodinAPI.new(@apiKey)

@@ -54,6 +54,16 @@ module Bitcodin
       return @httpClient.sendRequest('post', url, inputConfig.values)
     end
 
+    # Creates a new input in the bitcodin system asynchronously.
+    def createInputAsync(input_type, input_url)
+      url = @apiURL.concat('input/createasync')
+      values = {
+          :inputType => input_type,
+          :url => input_url
+      }.to_json
+      return @httpClient.sendRequest('post', url, values)
+    end
+
     # An existing input will be analyzed again and a new thumbnail will be created.
     def analyzeInput(id)
       url = @apiURL.concat('input/').concat(id.to_s).concat('/analyze')
