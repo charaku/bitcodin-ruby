@@ -58,9 +58,9 @@ module Bitcodin
     def createInputAsync(input_type, input_url)
       url = @apiURL.concat('input/createasync')
       values = {
-          :input_type => input_type,
+          :inputType => input_type,
           :url => input_url
-      }
+      }.to_json
       return @httpClient.sendRequest('post', url, values)
     end
 
