@@ -59,7 +59,7 @@ module Bitcodin
       url = @apiURL.concat('input/createasync')
       values = {
           :inputType => input_type,
-          :url => input_url
+          :url => URI.escape(input_url)
       }.to_json
       return @httpClient.sendRequest('post', url, values)
     end
