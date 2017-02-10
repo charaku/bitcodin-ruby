@@ -61,9 +61,15 @@ module Bitcodin
       url = @apiURL.concat('input/createasync')
       values = {
           :inputType => input_type,
-          :url => URI.escape(input_url)
+          :url => URI.escape(input_url),
       }.to_json
       return @httpClient.sendRequest('post', url, values)
+    end
+
+    # Creates a new input in the bitcodin system asynchronously.
+    def createInputS3Async(inputConfig)
+      url = @apiURL.concat('input/createasync')
+      return @httpClient.sendRequest('post', url, inputConfig.values)
     end
 
     # An existing input will be analyzed again and a new thumbnail will be created.
