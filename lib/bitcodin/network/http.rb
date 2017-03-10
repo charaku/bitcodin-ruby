@@ -62,7 +62,8 @@ module Bitcodin
       # puts url
       # puts value
       begin
-        response = RestClient.post url, value, @headers
+        # response = RestClient.post url, value, @headers
+        response = RestClient::Request.execute(:method => :post, :url => url, :headers => @headers, :timeout => 600, :payload => value)
         return response
       rescue Exception => e
         puts e.message
